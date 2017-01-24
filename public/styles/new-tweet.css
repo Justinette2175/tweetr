@@ -20,3 +20,7 @@
   float: right;
   padding-top:7px;
 }
+
+.new-tweet .counter.over-length {
+  color : red;
+}
