@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -35,7 +36,6 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>It may be that the primal source of all those pictorial delusions will be found among the oldest Hindoo, Egyptian, and Grecian sculptures. For ever since those inventive but unscrupulous times when on the marble panellings of temples, the pedestals of statues, and on shields, medallions, cups, and coins, the dolphin was drawn in scales of chain-armor like Saladin's, and a helmeted head like St. George's; ever since then has something of the same sort of license prevailed, not only in most popular pictures of the whale, but in many scientific presentations of him.</p>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
@@ -44,7 +44,24 @@
           <span class="counter">140</span>
         </form>
       </section>
-      <p>It may be that the primal source of all those pictorial delusions will be found among the oldest Hindoo, Egyptian, and Grecian sculptures. For ever since those inventive but unscrupulous times when on the marble panellings of temples, the pedestals of statues, and on shields, medallions, cups, and coins, the dolphin was drawn in scales of chain-armor like Saladin's, and a helmeted head like St. George's; ever since then has something of the same sort of license prevailed, not only in most popular pictures of the whale, but in many scientific presentations of him.</p>
+      <section id="tweets-container">
+        <article class="tweet-box">
+          <header>
+            <img class="avatar" src="images/avatar.png">
+            <h2>Bill Fields</h2>
+            <span class="handler">@MrFields</span>
+          </header>
+          <p class="tweet">Little Tweet Here</p>
+          <footer>
+            <span class="days-ago">10 days ago</span>
+            <div class="tweet-actions">
+              <a class="flag"><img src="images/flag.png"></a>
+              <a class="retweet"><img src="images/retweet.png"></a>
+              <a class="like"><img src="images/like.png"></a>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
 
   </body>
