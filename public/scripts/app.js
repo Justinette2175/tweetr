@@ -53,6 +53,12 @@
     }
   ];
 
+  function function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   function findTime(timePosted){
     const now = new Date().getTime();
     const differenceMs = now - timePosted;
@@ -80,10 +86,10 @@
     let $tweetBox = `<article class='tweet-box'>
        <header>
           <img class="avatar" src="${tweetData.user['avatars']['regular']}">
-          <h2>${tweetData['user']['name']}</h2>
-          <span class="handler">${tweetData['user']['handle']}</span>
+          <h2>${escape(tweetData['user']['name'])}</h2>
+          <span class="handler">${escape(tweetData['user']['handle'])}</span>
         </header>
-        <p class="tweet">${tweetData['content']['text']}</p>
+        <p class="tweet">${escape(tweetData['content']['text'])}</p>
         <footer>
           <span class="days-ago">${timeMessage}</span>
           <div class="tweet-actions">
