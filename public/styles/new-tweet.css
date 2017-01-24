@@ -1,0 +1,22 @@
+.new-tweet {
+  background-color: #eee;
+  margin : 2em;
+  padding:15px;
+  border-radius: 10px;
+}
+
+.new-tweet h2{
+  border-bottom: 1px solid black;
+  margin : 0;
+  margin-bottom: 20px;
+}
+
+.new-tweet form textarea{
+  width : 100%;
+}
+
+.new-tweet .counter{
+  font-size: 0.8rem;
+  float: right;
+  padding-top:7px;
+}
