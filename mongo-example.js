@@ -1,6 +1,6 @@
 "use strict"
 
-const const {MongoClient} = require("mongodb");
+const {MongoClient} = require("mongodb");
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
 MongoClient.connect(MONGODB_URI, (err, db) => {

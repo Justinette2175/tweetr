@@ -100,8 +100,9 @@
   //toggle the new tweet form
 
   $(".compose").on('click', function(){
-    $(".new-tweet").slideToggle(400);
-    $('.new-tweet').find("textarea").focus();
+    $(".new-tweet").slideToggle(400, () =>{
+      $(".new-tweet").is(':visible') && $('.new-tweet').find("textarea").focus();
+    });
   })
 
   //handle new tweet post
@@ -123,6 +124,5 @@
     }
   });
 })
-
 
 
