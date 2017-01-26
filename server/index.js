@@ -32,7 +32,6 @@ MongoClient.connect(MONGODB_URI, (err,db)=>{
 // Because it exports a function that expects the `db` as a parameter, we can
 // require it and pass the `db` parameter immediately:
 
-
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
