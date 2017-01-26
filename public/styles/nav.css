@@ -1,4 +1,5 @@
 #nav-bar{
+  z-index : 1;
   position:fixed;
   top:0;
   width:100%;
@@ -19,4 +20,22 @@
   float : left;
   font-size : 200%;
   line-height : 86px;
+}
+
+#nav-bar ul {
+  float : right;
+  list-style: none;
+}
+
+#nav-bar ul .compose{
+  margin-top:6px;
+  padding : 10px;
+  background-color: #e8fdff ;
+  color: #00a087;
+  border-radius : 5px;
+}
+
+#nav-bar ul .compose:hover{
+  cursor: pointer;
+  background-color: white;
 }

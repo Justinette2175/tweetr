@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  const maxChar = 10;
+  const maxChar = 140;
 
   $(".new-tweet form textarea").on('keyup', function(){
     var length = $(this).val().length;

@@ -24,3 +24,12 @@
 .new-tweet .counter.over-length {
   color : red;
 }
+
+.new-tweet .flash-message {
+  font-size: 0.8rem;
+  display:none;
+}
+
+.new-tweet .flash-message.visible{
+  display:block;
+}

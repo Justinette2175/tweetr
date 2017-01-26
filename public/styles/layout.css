@@ -24,6 +24,7 @@ body {
 main{
   width : 450px;
   margin : 0 auto;
+  padding : 0.1em 0;
   background-color: white;
   position : relative;
   top : 140px;
