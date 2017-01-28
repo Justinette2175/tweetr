@@ -1,35 +1,24 @@
 .new-tweet {
   background-color: #eee;
-  margin : 2em;
-  padding:15px;
-  border-radius: 10px;
-}
+  margin: 2em;
+  padding: 15px;
+  border-radius: 10px; }
+  .new-tweet h2 {
+    border-bottom: 1px solid black;
+    margin: 0;
+    margin-bottom: 20px; }
+  .new-tweet form textarea {
+    width: 100%; }
+  .new-tweet .counter {
+    font-size: 0.8rem;
+    float: right;
+    padding-top: 7px; }
+    .new-tweet .counter.over-length {
+      color: red; }
+  .new-tweet .flash-message {
+    font-size: 0.8rem;
+    display: none; }
+  .new-tweet.visible {
+    display: block; }
 
-.new-tweet h2{
-  border-bottom: 1px solid black;
-  margin : 0;
-  margin-bottom: 20px;
-}
-
-.new-tweet form textarea{
-  width : 100%;
-}
-
-.new-tweet .counter{
-  font-size: 0.8rem;
-  float: right;
-  padding-top:7px;
-}
-
-.new-tweet .counter.over-length {
-  color : red;
-}
-
-.new-tweet .flash-message {
-  font-size: 0.8rem;
-  display:none;
-}
-
-.new-tweet .flash-message.visible{
-  display:block;
-}
+/*# sourceMappingURL=new-tweet.css.map */

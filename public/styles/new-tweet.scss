@@ -1,0 +1,30 @@
+.new-tweet {
+  background-color: #eee;
+  margin : 2em;
+  padding:15px;
+  border-radius: 10px;
+  h2{
+    border-bottom: 1px solid black;
+    margin : 0;
+    margin-bottom: 20px;
+  }
+  form textarea{
+    width : 100%;
+  }
+  .counter{
+    font-size: 0.8rem;
+    float: right;
+    padding-top:7px;
+    &.over-length {
+      color : red;
+    }
+  }
+  .flash-message {
+    font-size: 0.8rem;
+    display:none;
+  }
+  &.visible{
+    display:block;
+  }
+}
+

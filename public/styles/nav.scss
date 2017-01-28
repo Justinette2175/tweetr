@@ -1,0 +1,38 @@
+#nav-bar{
+  z-index : 1;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  background-color: #00a087;
+  color : #e8fdff;
+  padding : 0 2em;
+
+  .logo{
+    width:80px;
+    height : 80px;
+    float : left;
+    margin-right : 10px;
+  }
+  .header{
+    float : left;
+    font-size : 200%;
+    line-height : 86px;
+  }
+    ul {
+    float : right;
+    list-style: none;
+  }
+  .compose{
+    margin-top:6px;
+    padding : 10px;
+    background-color: #e8fdff ;
+    color: #00a087;
+    border-radius : 5px;
+  }
+
+  &:hover{
+    cursor: pointer;
+    background-color: white;
+  }
+}

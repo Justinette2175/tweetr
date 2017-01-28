@@ -1,4 +1,4 @@
-"use strict";
+8
 
 // Basic express setup:
 
@@ -12,10 +12,10 @@ app.use(express.static("public"));
 
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
-const {MongoClient} = require("mongodb");
+const mongo = require("mongodb");
 
-MongoClient.connect(MONGODB_URI, (err,db)=>{
-  const DataHelpers = require("./lib/data-helpers.js")(db);
+mongo.MongoClient.connect(MONGODB_URI, (err,db)=>{
+  const DataHelpers = require("./lib/data-helpers.js")(db, mongo.ObjectID);
   // The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
   // so it can define routes that use it to interact with the data layer.
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);

@@ -38,7 +38,9 @@
 
   function createTweetElement(tweetData){
     let timeMessage = findTime(tweetData.created_at)
-    let $tweetBox = `<article class='tweet-box'>
+    let likes = tweetData.likes || 0;
+    console.log("likes", likes);
+    let $tweetBox = `<article class='tweet-box' data-id="${tweetData._id}">
        <header>
           <img class="avatar" src="${tweetData.user['avatars']['regular']}">
           <h2>${escape(tweetData['user']['name'])}</h2>
@@ -50,7 +52,11 @@
           <div class="tweet-actions">
             <a class="flag"><img src="images/flag.png"></a>
             <a class="retweet"><img src="images/retweet.png"></a>
-            <a class="like"><img src="images/like.png"></a>
+            <a class="like">
+              <img src="images/like.png">
+              <span>${likes}</span>
+            </a>
+
           </div>
         </footer>
       </article>
@@ -91,6 +97,10 @@
     }
   }
 
+  function addLike(){
+
+  }
+
   $(".new-tweet").hide();
 
   //load tweets on page load
@@ -109,7 +119,7 @@
 
   $(".new-tweet form").on('submit', function(e){
     e.preventDefault();
-    inputText = $(this).find("textarea").val();
+    let inputText = $(this).find("textarea").val();
     if(isValidTweet(inputText) === true){
       $.ajax({
         url : "/tweets",
@@ -123,6 +133,19 @@
       $(this).find(".flash-message").addClass("visible").text(isValidTweet(inputText));
     }
   });
+
+  console.log($(".like"));
+
+  $("#tweets-container").on("click", ".like", function(e){
+    let id = $(this).closest(".tweet-box").data("id");
+    e.preventDefault();
+    $.ajax({
+      url : "/tweets/likes",
+      method : 'POST',
+      data : {id: id},
+      success: loadTweets
+    })
+  })
 })
 
 
